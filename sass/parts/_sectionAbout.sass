@@ -1,0 +1,38 @@
+// Part About
+.sectionAbout
+  h1
+    display: flex
+    justify-content: left
+    flex-wrap: wrap
+    margin: 0 0 1em 0
+    text-transform: capitalize
+    letter-spacing: 2px
+  div
+    margin-bottom: 2.45em
+    h3
+      font-size: 32px
+      color: $mainColor
+      margin-bottom: 24px
+      font-family: 'adevaleregular', cursive
+      text-transform: capitalize
+      &:before
+        content: ''
+        margin-right: 0.32em
+        display: inline-block
+        width: 3px
+        height: 22px
+        border-radius: 3px
+        background-color: $mainColor
+        -webkit-transform: rotate(22deg)
+        -moz-transform: rotate(22deg)
+        -ms-transform: rotate(22deg)
+        -o-transform: rotate(22deg)
+        transform: rotate(22deg)
+    p
+      margin-bottom: 16px
+    .contactMe
+      font-style: italic
+      a
+        text-decoration: none
+        color: inherit
+        border-bottom: 1px solid $mainColor

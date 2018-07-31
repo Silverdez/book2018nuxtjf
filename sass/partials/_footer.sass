@@ -1,0 +1,82 @@
+// Footer
+.footer
+  height: 60px
+  margin: 0 !important
+  .scrollMouse
+    margin: 0 auto
+    width: 18px
+    height: 28px
+    border-radius: 6px
+    border: 2px solid $mainColor
+    -webkit-transform: translateX(-50%)
+    transform: translateX(-50%)
+    cursor: pointer
+    .scrollMouseWheel
+      position: absolute
+      top: 10%
+      left: 50%
+      width: 4px
+      height: 7px
+      margin-left: -2px
+      border-radius: 3px
+      background-color: white
+      -webkit-animation: mouse-scroll .9s infinite
+      animation: mouse-scroll .9s infinite
+  .mentions
+    text-align: center
+    padding: 0
+    margin: 0
+    background-color: transparent
+    p
+      font-size: 0.80em
+      line-height: 16px
+    a
+      color: $mainColor
+  .social
+    text-align: center
+    padding: 0
+    margin: 0
+    background-color: transparent
+    a
+      vertical-align: middle
+    a i
+      color: white
+      font-size: 1.1em
+      display: inline-block
+      margin: 0 10px
+      transition: all 0.45s ease-in-out
+      &:hover
+        -webkit-transform: rotate(-16deg) scale(1.2)
+        -moz-transform: rotate(-16deg) scale(1.2)
+        -ms-transform: rotate(-16deg) scale(1.2)
+        -o-transform: rotate(-16deg) scale(1.2)
+        transform: rotate(-16deg) scale(1.2)
+      &.fa-facebook-f:hover
+        color: #3b5998
+      &.fa-twitter:hover
+        color: #1da1f2
+      &.fa-linkedin-in:hover
+        color: #007bb5
+      &.fa-dribbble:hover
+        color: #ea4c89
+      &.fa-behance:hover
+        color: #0057ff
+
+@keyframes mouse-scroll
+  0%
+    top: 10%
+    opacity: 1
+  80%
+    opacity: 1
+  100%
+    top: 30%
+    opacity: 0
+
+@media (max-width: 992px)
+  .footer
+    position: inherit
+    padding: 0 25px
+    bottom: 0
+    background-color: rgba($color-dark, 0.85)
+    .column
+      padding-bottom: 8px
