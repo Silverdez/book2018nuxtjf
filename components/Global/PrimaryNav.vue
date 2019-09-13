@@ -110,7 +110,10 @@
                 return{
                     scroll:true
                 }
-            }
+            },
+            toggleBackButton(show) {
+                this.back = show
+            },
         }
     }
 </script>

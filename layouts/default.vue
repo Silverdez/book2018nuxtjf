@@ -1,8 +1,8 @@
 <template>
   <div>
-      <PrimaryNav/>
+      <PrimaryNav ref="primary" />
       <Availability/>
-        <nuxt/>
+        <nuxt @showBackButton=toggleBackButton(true) @hideBackButton=toggleBackButton(false) />
       <Footer/>
   </div>
 </template>
@@ -17,6 +17,14 @@
             Footer,
             PrimaryNav,
             Availability
+        },
+        mounted () {
+            console.log('default.vue');
+        },
+        methods: {
+            toggleBackButton(show) {
+                this.$refs.primary.toggleBackButton(show);
+            }
         }
     }
 </script>

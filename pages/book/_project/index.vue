@@ -32,7 +32,12 @@
 
 <script>
     export default {
-
+        mounted () {
+          this.$parent.$emit('showBackButton');
+        },
+        destroyed () {
+          this.$parent.$emit('hideBackButton');
+        },
         validate(data){
             return /^\d+$/.test(data.params.project);
             return this.loadUProject() != undefined
